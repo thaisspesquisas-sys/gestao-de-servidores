@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #f6f8fb;
+}
+h1, h2, h3, h4, .font-display { font-family: "Plus Jakarta Sans", sans-serif; }
+.font-mono, code { font-family: "JetBrains Mono", monospace; }
+
+@layer base {
+    :root {
+        --background: 216 33% 97%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 214 60% 11%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 214 60% 11%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215 16% 42%;
+        --accent: 46 64% 96%;
+        --accent-foreground: 214 60% 11%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 214 32% 90%;
+        --input: 214 32% 88%;
+        --ring: 46 65% 52%;
+        --radius: 0.6rem;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    body { @apply bg-background text-foreground; }
+}
+
+.section-title { border-left: 4px solid #D4AF37; padding-left: 0.75rem; }
+.gold-line { position: relative; }
+.gold-line::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 2px; background: linear-gradient(90deg, #D4AF37, transparent 70%); }
+.fade-up { animation: fadeUp .45s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.grid-bg { background-image: radial-gradient(rgba(212,175,55,.18) 1px, transparent 1px); background-size: 22px 22px; }
+.table-dense th { background: #0B192C; color: #fff; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding: 8px 10px; white-space: nowrap; position: sticky; top: 0; z-index: 2; }
+.table-dense td { padding: 7px 10px; font-size: 13px; border-bottom: 1px solid #eef2f6; }
+.table-dense tbody tr:hover td { background: #fdf8ea; }
+.num { font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; }
+
+[data-debug-wrapper="true"] { display: contents !important; }

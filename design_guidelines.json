@@ -1,0 +1,137 @@
+{
+  "project_title": "GESTÃO INTELIGENTE DE VAGAS – EDUCAÇÃO",
+  "subtitle": "Controle, dimensionamento e distribuição de servidores da Rede Municipal de Ensino",
+  "archetype": "SWISS & INSTITUTIONAL LUXURY (Authority, Civic Integrity & Precision)",
+  "language": "pt-BR",
+  "theme_strategy": {
+    "default_mode": "light",
+    "toggle_enabled": true,
+    "description": "Institutional government dashboard for Municipal Secretariat of Education. Light theme primary for daily office use with high contrast, with dark mode toggle for low-light management environments."
+  },
+  "colors": {
+    "palette": {
+      "navy_primary": "#0B192C",
+      "navy_deep": "#1E3E62",
+      "navy_surface": "#0F2137",
+      "gold_accent": "#D4AF37",
+      "gold_hover": "#B89628",
+      "gold_subtle": "#FDF8EA",
+      "white_pure": "#FFFFFF",
+      "background_light": "#F8FAFC",
+      "surface_card": "#FFFFFF",
+      "border_subtle": "#E2E8F0",
+      "text_headline": "#0F172A",
+      "text_body": "#334155",
+      "text_muted": "#64748B",
+      "status_available": "#059669",
+      "status_occupied": "#2563EB",
+      "status_reserved": "#D97706",
+      "status_deficit": "#DC2626",
+      "status_surplus": "#7C3AED"
+    },
+    "rules": [
+      "Use #0B192C (Azul-Marinho) for primary sidebar, institutional header banners, and high-impact indicators.",
+      "Use #D4AF37 (Dourado Institucional) for badges, subtle card accent lines, verified seals, active navigation indicators, and primary action buttons.",
+      "Never use pure transparent backgrounds on dropdowns, modals, or sticky headers. Use backdrop-blur-md with solid/semi-solid navy or white base.",
+      "Ensure all status colors (Verde=Disponível, Azul=Ocupado, Amarelo=Reservado, Vermelho=Déficit, Roxo=Excedente) maintain WCAG AA 4.5:1 contrast against their card backgrounds."
+    ]
+  },
+  "typography": {
+    "heading_font": "Plus Jakarta Sans, sans-serif",
+    "body_font": "Inter, sans-serif",
+    "mono_font": "JetBrains Mono, monospace",
+    "hierarchy": {
+      "h1_hero": "text-3xl md:text-4xl font-extrabold tracking-tight",
+      "h2_section": "text-xl md:text-2xl font-bold tracking-tight",
+      "h3_card": "text-lg font-semibold",
+      "body_base": "text-sm text-slate-700 leading-relaxed",
+      "small_label": "text-xs font-medium uppercase tracking-wider text-slate-500",
+      "table_data": "text-xs font-mono font-medium"
+    },
+    "rules": [
+      "Do NOT use Inter for main titles/headings — use Plus Jakarta Sans with bold/extra-bold weights.",
+      "Use monospaced font (JetBrains Mono / Source Code Pro) for Matrícula IDs, CPF fields, matrix grade values (MAT I..FASE IX), and numerical KPI counts.",
+      "Keep section headers punchy and left-aligned with a subtle gold left border (border-l-4 border-[#D4AF37] pl-3)."
+    ]
+  },
+  "layout_and_grids": {
+    "sidebar": {
+      "style": "Fixed left navigation with collapsed option. Background: #0B192C with gold accent active indicators.",
+      "items": [
+        "Dashboard de Indicadores",
+        "Central de Importação",
+        "Gestão de Servidores",
+        "Quadro de Distribuição Escolar",
+        "Motor de Cruzamento & De-Para",
+        "Controle de Vagas",
+        "Reservas de Vagas",
+        "Situações Funcionais",
+        "Consulta por Escola",
+        "Assistente de Consultas (Regras)",
+        "Relatórios & Exportação",
+        "Trilha de Auditoria",
+        "Usuários e Permissões"
+      ]
+    },
+    "kpi_grid": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6",
+    "dashboard_grid": "grid-cols-1 lg:grid-cols-12 gap-6",
+    "distribution_table": "Overflow horizontal table layout with sticky school name column on left, scrollable matrix columns (MAT I to FASE IX, Total, Vagas, Déficit/Excedente) on right."
+  },
+  "components": {
+    "cards": {
+      "style": "bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200 rounded-xl p-5 relative overflow-hidden",
+      "accent": "Top subtle 2px border accent in gold (#D4AF37) or status colors."
+    },
+    "tables": {
+      "style": "Dense, professional data grid with hoverable rows, sticky headers (bg-[#0B192C] text-white), zebra-striping option, and sticky status badges.",
+      "editable_cells": "Inline editing for Quadro de Distribuição Escolar with instant visual highlight for changes."
+    },
+    "import_wizard": {
+      "steps": ["1. Upload de Arquivo (XLSX, XLS, CSV, PDF)", "2. Seleção de Aba / Planilha", "3. Mapeamento Inteligente de Colunas", "4. Pré-visualização & Validação de Erros", "5. Confirmação & Importação"]
+    },
+    "query_assistant": {
+      "type": "Rule-based search helper chat modal / slide-over (Sem IA Generativa, baseado estritamente em filtros de banco de dados e regras de negócio da Educação)."
+    },
+    "auth": {
+      "provider": "Clerk Integration (SignIn / UserButton components wrapped in institutional layout with Municipal coat-of-arms branding)."
+    }
+  },
+  "image_urls": [
+    {
+      "category": "institutional_background",
+      "url": "https://images.unsplash.com/photo-1599725427295-6ed79ff8dbef?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxzY2hvb2wlMjBidWlsZGluZyUyMGVkdWNhdGlvbiUyMGluc3RpdHV0aW9uYWx8ZW58MHx8fHwxNzk0MjE5OTI3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Educational institution building background for login banner and municipal dashboard headers"
+    },
+    {
+      "category": "school_hallway",
+      "url": "https://images.unsplash.com/photo-1494949649109-ecfc3b8c35df?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxzY2hvb2wlMjBidWlsZGluZyUyMGVkdWNhdGlvbiUyMGluc3RpdHV0aW9uYWx8ZW58MHx8fHwxNzk0MjE5OTI3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Clean school interior hallway image for report headers and detail cards"
+    }
+  ],
+  "testing_attributes": {
+    "rule": "ALL interactive components, form inputs, metric displays, buttons, modal triggers, and navigation links MUST include a unique data-testid attribute in kebab-case format.",
+    "examples": [
+      "data-testid=\"sidebar-link-dashboard\"",
+      "data-testid=\"kpi-card-vagas-disponiveis\"",
+      "data-testid=\"btn-importar-dados\"",
+      "data-testid=\"table-quadro-distribuicao\"",
+      "data-testid=\"filter-escola-select\"",
+      "data-testid=\"btn-efetivar-reserva\""
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Ensure all user interfaces use pure Portuguese (pt-BR) terminology standard in Brazilian Municipal Education Secretariats (e.g., Matrícula, Servidor, Vagas Autorizadas, Vagas Excedentes, Déficit, Etapa de Ensino, MAT I, FASE IX, Quadro de Distribuição Escolar).",
+    "Strictly follow code style with .js / .jsx React components (not TypeScript .tsx files).",
+    "Integrate Lucide React icons for intuitive navigation: LayoutDashboard, FileSpreadsheet, Users, Table, GitCompare, BookmarkCheck, Sliders, Building2, Bot, FileText, ShieldAlert, UserCheck, LogOut.",
+    "Ensure the Quadro de Distribuição Escolar table allows side-by-side editing of teacher allocation per stage (MAT I to FASE IX) with automatic row/column summing.",
+    "Implement Sonner toast notifications for feedback on actions like creating/canceling reservations, saving distribution matrices, and importing files.",
+    "Ensure full responsiveness across desktop, laptop, tablet, and mobile views with collapsible sidebar drawer on small screens."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic outputs. Create distinctive frontends that feel premium, trustworthy, and institutional.",
+    "Dark navy blue (#0B192C) with gold details (#D4AF37) provides high visual authority.",
+    "Layered shadows and 1px crisp borders elevate the interface from standard Bootstrap/Tailwind slop.",
+    "Never use transparent dropdowns or popovers — assign bg-white or bg-slate-900 with clear borders.",
+    "Every button and interactive card must have smooth hover and focus transitions (e.g., transition-all duration-200 hover:-translate-y-0.5)."
+  ]
+}
